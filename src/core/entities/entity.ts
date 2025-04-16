@@ -13,8 +13,8 @@ export abstract class Entity<Props> {
     this._id = id ?? new UniqueEntityID();
   }
 
-  public equals(entity: Entity<any>) {
-    // eslint-disable-line @typescript-eslint/no-explicit-any
+  public equals(entity: Entity<unknown>) {
+
     if (entity === this) {
       return true;
     }

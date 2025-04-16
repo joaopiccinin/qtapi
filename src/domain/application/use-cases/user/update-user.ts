@@ -12,7 +12,10 @@ type UpdateUserResponse = Either<ResourceNotFoundError, {}>;
 export class UpdateUserUseCase {
   constructor(private userRepository: UserRepository) {}
 
-  async execute(userId: string, request: UpdateUserUseCaseRequest): Promise<UpdateUserResponse> {
+  async execute(
+    userId: string,
+    request: UpdateUserUseCaseRequest
+  ): Promise<UpdateUserResponse> {
     const user = await this.userRepository.findById(userId);
 
     if (!user) {

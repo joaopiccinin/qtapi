@@ -9,7 +9,6 @@ import { makeUserEstablishment } from "test/factories/make-user-establishment";
 
 let inMemoryUserRepository: InMemoryUserRepository;
 let inMemoryUserEstablishmentRepository: InMemoryuserEstablishmentRepository;
-let Es
 let sut: DeleteUserUseCase;
 
 describe("Delete User", () => {

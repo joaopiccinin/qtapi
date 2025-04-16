@@ -4,6 +4,7 @@ import { Country } from "../utils/enums/country";
 import { InvalidCountryError } from "./errors/invalid-country-error";
 import { Address } from "@/domain/enterprise/entities/address/address";
 import { InvalidPostalCodeError } from "@/domain/enterprise/entities/address/value-objects/errors/invalid-postal-code-error";
+import { AddressTypeEnum } from "@/domain/enterprise/entities/address/address-type";
 
 let inMemoryAddressRepository: InMemoryAddressRepository;
 let sut: CreateAddressUseCase;
@@ -21,7 +22,7 @@ describe("Create Address", () => {
       city: "Ijui",
       street: "Rua João",
       number: "123",
-      addressType: "Residential",
+      addressType: AddressTypeEnum.Residential,
       complement: "Apto 203",
       postalCode: "98700-000",
     });
@@ -50,7 +51,7 @@ describe("Create Address", () => {
       city: "Ijui",
       street: "Rua João",
       number: "123",
-      addressType: "Residential",
+      addressType: AddressTypeEnum.Residential,
       postalCode: "98700-000",
     });
 
@@ -65,7 +66,7 @@ describe("Create Address", () => {
       city: "Ijui",
       street: "Rua João",
       number: "123",
-      addressType: "Residential",
+      addressType: AddressTypeEnum.Residential,
       postalCode: "123456",
     });
 

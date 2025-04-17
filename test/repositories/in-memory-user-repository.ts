@@ -1,5 +1,5 @@
 import { DomainEvents } from "@/core/domain-events/domain-events";
-import { UserRepository } from "@/domain/stock/application/repositories/user-repository";
+import { UserRepository } from "@/domain/application/repositories/user-repository";
 import { User, UserProps } from "@/domain/enterprise/entities/user/user";
 
 export class InMemoryUserRepository implements UserRepository {

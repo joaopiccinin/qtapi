@@ -2,12 +2,6 @@ import { Optional } from "@/core/types/optional";
 import { UniqueEntityID } from "@/core/entities/unique-entity-id";
 import { AggregateRoot } from "@/core/entities/aggregate-root";
 
-export enum AddressTypeEnum {
-  Residential = "Residential",
-  Commercial = "Commercial",
-  Business = "Business",
-}
-
 //For while, we will just use an enum for address types, but, in future versions, we will implement personalized adress types if necessary.
 
 export interface AddressTypeProps {

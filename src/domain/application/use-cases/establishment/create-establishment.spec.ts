@@ -24,7 +24,7 @@ describe("Create Establishment", () => {
     sut = new CreateEstablishmentUseCase(
       inMemoryEstablishmentRepository,
       inMemoryEstablishmentAddressRepository,
-      inMemoryAddressRepository,
+      inMemoryAddressRepository
     );
   });
 

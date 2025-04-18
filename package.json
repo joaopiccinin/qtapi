@@ -1,9 +1,10 @@
 {
   "name": "vet-project",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "type": "module",
   "scripts": {
+    "start": "ts-node src/main.ts",
     "build": "tsc",
     "test": "vitest run",
     "test:watch": "vitest",

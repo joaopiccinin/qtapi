@@ -4,7 +4,7 @@ import { Country } from "../utils/enums/country";
 import { InvalidCountryError } from "./errors/invalid-country-error";
 import { Address } from "@/domain/enterprise/entities/address/address";
 import { InvalidPostalCodeError } from "@/domain/enterprise/entities/address/value-objects/errors/invalid-postal-code-error";
-import { AddressTypeEnum } from "@/domain/enterprise/entities/address/address-type";
+import { AddressTypeEnum } from "@/domain/enterprise/entities/address/enum/adress-type.enum";
 
 let inMemoryAddressRepository: InMemoryAddressRepository;
 let sut: CreateAddressUseCase;

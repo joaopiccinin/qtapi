@@ -1,9 +1,9 @@
 import { Either, failure, success } from "@/core/either";
 import { EstablishmentAddress } from "@/domain/enterprise/entities/relationships/establishment-address";
-import { AddressTypeEnum } from "@/domain/enterprise/entities/address/address-type";
 import { UniqueEntityID } from "@/core/entities/unique-entity-id";
 import { InvalidAddressTypeError } from "../address/errors/invalid-address-type-error";
 import { EstablishmentAddressRepository } from "../../repositories/establishment-address-repository";
+import { AddressTypeEnum } from "@/domain/enterprise/entities/address/enum/adress-type.enum";
 
 interface CreateEstablishmentAddressRequest {
   establishmentId: string;

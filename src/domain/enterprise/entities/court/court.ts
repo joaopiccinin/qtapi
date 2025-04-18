@@ -23,6 +23,14 @@ export class Court extends AggregateRoot<CourtProps> {
     return this.props.type;
   }
 
+  get establishmentId(): UniqueEntityID {
+    return this.props.establishmentId;
+  }
+
+  get createdAt(): Date {
+    return this.props.createdAt;
+  }
+
   set name(name: string) {
     this.props.name = name;
   }
@@ -33,6 +41,10 @@ export class Court extends AggregateRoot<CourtProps> {
 
   set type(type: string) {
     this.props.type = type;
+  }
+
+  set establishmentId(establishmentId: UniqueEntityID) {
+    this.props.establishmentId = establishmentId;
   }
 
   static create(

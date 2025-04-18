@@ -42,6 +42,8 @@ export class CreateCourtUseCase {
       createdAt: new Date(),
     });
 
+    console.log(court);
+
     await this.courtRepository.create(court);
 
     return success({ court });

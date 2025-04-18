@@ -1,5 +1,5 @@
 import { DomainEvents } from "@/core/domain-events/domain-events";
-import { AddressRepository } from "@/domain/stock/application/repositories/address-repository";
+import { AddressRepository } from "@/domain/application/repositories/address-repository";
 import { Address, AddressProps } from "@/domain/enterprise/entities/address/address";
 
 export class InMemoryAddressRepository implements AddressRepository {

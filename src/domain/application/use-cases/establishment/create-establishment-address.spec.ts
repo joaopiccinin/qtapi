@@ -1,9 +1,9 @@
-import { AddressTypeEnum } from "@/domain/enterprise/entities/address/address-type";
 import { makeAddress } from "test/factories/make-address";
 import { makeEstablishment } from "test/factories/make-establishment";
 import { InMemoryEstablishmentAddressRepository } from "test/repositories/in-memory-establishment-address-repository";
 import { InvalidAddressTypeError } from "../address/errors/invalid-address-type-error";
 import { CreateEstablishmentAddressUseCase } from "./create-establishment-address";
+import { AddressTypeEnum } from "@/domain/enterprise/entities/address/enum/adress-type.enum";
 
 
 let inMemoryEstablishmentAddressRepository: InMemoryEstablishmentAddressRepository;

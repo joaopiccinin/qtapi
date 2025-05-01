@@ -1,11 +1,14 @@
 import { CourtRepository } from "../../repositories/court-repository";
 import { Either, failure, success } from "@/core/either";
 import { ResourceNotFoundError } from "@/core/errors/commons/resource-not-found-error";
+import { CourtLocationTypeEnum } from "@/domain/enterprise/entities/court/enum/court-location-type.enum";
 import { CourtTypeEnum } from "@/domain/enterprise/entities/court/enum/court-type.enum";
 
 export interface UpdateCourtUseCaseRequest {
-  name: string;
-  type: CourtTypeEnum;
+  name?: string;
+  type?: CourtTypeEnum;
+  locationType?: CourtLocationTypeEnum;
+  bookingDurationMinutes?: number;
 }
 
 type UpdateCourtResponse = Either<ResourceNotFoundError, {}>;

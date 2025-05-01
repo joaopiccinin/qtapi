@@ -5,6 +5,7 @@ import { CourtTypeEnum } from "@/domain/enterprise/entities/court/enum/court-typ
 import { makeEstablishment } from "test/factories/make-establishment";
 import { InMemoryEstablishmentRepository } from "test/repositories/in-memory-establishment-repository";
 import { ResourceNotFoundError } from "@/core/errors/commons/resource-not-found-error";
+import { CourtLocationTypeEnum } from "@/domain/enterprise/entities/court/enum/court-location-type.enum";
 
 let inMemoryCourtRepository: InMemoryCourtRepository;
 let inMemoryEstablishmentRepository: InMemoryEstablishmentRepository;
@@ -28,6 +29,8 @@ describe("Create Court", () => {
       name: "Quadra 1",
       type: CourtTypeEnum.FUTSAL,
       establishmentId: establishment.id.toString(),
+      locationType: CourtLocationTypeEnum.COVERED,
+      bookingDurationMinutes: 30,
     });
 
     expect(result.isSuccess()).toBe(true);
@@ -49,6 +52,8 @@ describe("Create Court", () => {
       name: "Quadra 1",
       type: CourtTypeEnum.FUTSAL,
       establishmentId: "inexistent-id",
+      locationType: CourtLocationTypeEnum.COVERED,
+      bookingDurationMinutes: 30,
     });
 
     expect(result.isFailure()).toBe(true);

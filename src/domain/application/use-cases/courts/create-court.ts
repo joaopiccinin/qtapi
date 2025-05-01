@@ -5,11 +5,14 @@ import { Either, failure, success } from "@/core/either";
 import { ResourceNotFoundError } from "@/core/errors/commons/resource-not-found-error";
 import { EstablishmentRepository } from "../../repositories/establishment-repository";
 import { UniqueEntityID } from "@/core/entities/unique-entity-id";
+import { CourtLocationTypeEnum } from "@/domain/enterprise/entities/court/enum/court-location-type.enum";
 
 interface CreateCourtUseCaseRequest {
   name: string;
   type: CourtTypeEnum;
   establishmentId: string;
+  bookingDurationMinutes: number;
+  locationType: CourtLocationTypeEnum;
 }
 
 type CreateCourtResponse = Either<
@@ -39,10 +42,10 @@ export class CreateCourtUseCase {
       name: request.name,
       type: request.type,
       establishmentId: new UniqueEntityID(request.establishmentId),
+      bookingDurationMinutes: request.bookingDurationMinutes,
+      locationType: request.locationType,
       createdAt: new Date(),
     });
-
-    console.log(court);
 
     await this.courtRepository.create(court);
 
